@@ -24,6 +24,14 @@ sumlog <- function(evens) {
 }
 sumlog(c(2,4,6,8,10)) #five even integers
 sumlog(c(6,8,10))
+
+evens <- function(e) subset(e, e %% 2 == 0)
+evens(1:20)
+sumlog <- function(evens) {
+  log(evens)+log10(evens)+log2(evens)
+}
+sumlog(c(2,4,6,8,10,20)) 
+sumlog(c(6,8,10,20))
 ```
 
 # 2) Use the if-else structure to print the statement "This is a big number" if the square of a value is greater than or equal to 100 and the following statement is printed if the square of the number is less than 100, "This is not a big number”. Use and show values of assignment and if-else structures that will output both statements.
@@ -34,7 +42,7 @@ if (bignumber > 100  & bignumber >= 100) {
 } else if (bignumber < 100  & bignumber <= 100) {
   print('This is not a big number')
 }
-notbig <- 9^2
+notbig <- 11^2
 if (notbig > 100  & notbig >= 100) {
   print('This is a big number')
 } else if (notbig < 100  & notbig <= 100) {
